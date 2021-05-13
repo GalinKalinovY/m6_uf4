@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu principal Last FM</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/constants.js"></script>-->
+    <script type="text/javascript" src="./js/UTF8.js"></script>
+    <script type="text/javascript" src="./js/md5.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/ajaxProva2.js"></script>
+
+</head>
+<body>
+<h1>Im login to</h1>
+<div id="userData">
+    <!--<img src="https://lastfm-img2.akamaized.net/i/u/34s/cc637716959b4acecaa1a307e300f61f.png" />-->
+</div>
+<br>
+
+<div id="success">
+    <div id="artistName"></div>
+    <div id="artistImage"></div>
+    <div id="artistBio"></div>
+</div>
+<div id="error"></div>
+
+<br>
+<br>
+<p>Notes de lautor:<br>
+    Copyright tots els drets reservats...<br>
+    Prohibida la copia distribucio o reproduccio total o PARCIAL sense permis</p>
+<br>
+<br>
+<button type="button" onclick="loadDoc()">Get User information</button>
+<table id="demo"></table>
+
+<button type="button" onclick="calculateApiSignatureStack()">Calculate API Signature Stack</button>
+</body>
+</html>

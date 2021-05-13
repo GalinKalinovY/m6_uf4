@@ -1,0 +1,152 @@
+<album>
+    <name>Slime Season 3</name>
+    <artist>Young Thug</artist>
+    <url>
+        https://www.last.fm/music/Young+Thug/Slime+Season+3
+    </url>
+    <image size="small">
+        https://lastfm.freetls.fastly.net/i/u/34s/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <image size="medium">
+        https://lastfm.freetls.fastly.net/i/u/64s/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <image size="large">
+        https://lastfm.freetls.fastly.net/i/u/174s/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <image size="extralarge">
+        https://lastfm.freetls.fastly.net/i/u/300x300/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <image size="mega">
+        https://lastfm.freetls.fastly.net/i/u/300x300/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <image size="">
+        https://lastfm.freetls.fastly.net/i/u/300x300/a6c3aec9c934fb249a41818ac6d55360.png
+    </image>
+    <listeners>142927</listeners>
+    <playcount>3121451</playcount>
+    <tracks>
+        <track rank="1">
+            <name>With Them</name>
+            <url>https://www.last.fm/music/Young+Thug/_/With+Them</url>
+            <duration>197</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="2">
+            <name>Memo</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Memo</url>
+            <duration>195</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="3">
+            <name>Drippin'</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Drippin%27</url>
+            <duration>186</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="4">
+            <name>Slime Shit</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Slime+Shit</url>
+            <duration>278</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="5">
+            <name>Digits</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Digits</url>
+            <duration>176</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="6">
+            <name>Worth It</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Worth+It</url>
+            <duration>186</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="7">
+            <name>Tattoos</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Tattoos</url>
+            <duration>241</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+        <track rank="8">
+            <name>Problem</name>
+            <url>https://www.last.fm/music/Young+Thug/_/Problem</url>
+            <duration>241</duration>
+            <streamable fulltrack="0">0</streamable>
+            <artist>
+                <name>Young Thug</name>
+                <mbid>800760de-bdf8-43a2-8fe0-44a2401a5515</mbid>
+                <url>https://www.last.fm/music/Young+Thug</url>
+            </artist>
+        </track>
+    </tracks>
+    <tags>
+        <tag>
+            <name>trap</name>
+            <url>https://www.last.fm/tag/trap</url>
+        </tag>
+        <tag>
+            <name>rap</name>
+            <url>https://www.last.fm/tag/rap</url>
+        </tag>
+        <tag>
+            <name>Young Thug</name>
+            <url>https://www.last.fm/tag/Young+Thug</url>
+        </tag>
+        <tag>
+            <name>hip hop</name>
+            <url>https://www.last.fm/tag/hip+hop</url>
+        </tag>
+        <tag>
+            <name>hiphop</name>
+            <url>https://www.last.fm/tag/hiphop</url>
+        </tag>
+    </tags>
+    <wiki>
+        <published>08 Jul 2016, 22:31</published>
+        <summary>
+            Slime Season 3 is a mixtape by American rapper Young Thug. It was released on March 25, 2016 as the final installment in the Slime Season series. The project consists of eight tracks, with guest appearances from Yak Gotti, Duke and PeeWee Roscoe, and production from Mike Will Made-It, London On Da Track, Allen Ritter, Isaac Flame and MariiBeatz.
+            <a href="http://www.last.fm/music/Young+Thug/Slime+Season+3"></a>
+            Read more on Last.fm.
+        </summary>
+        <content>
+            Slime Season 3 is a mixtape by American rapper Young Thug. It was released on March 25, 2016 as the final installment in the Slime Season series. The project consists of eight tracks, with guest appearances from Yak Gotti, Duke and PeeWee Roscoe, and production from Mike Will Made-It, London On Da Track, Allen Ritter, Isaac Flame and MariiBeatz.
+            <a href="http://www.last.fm/music/Young+Thug/Slime+Season+3"></a>
+            Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.
+        </content>
+    </wiki>
+</album>
