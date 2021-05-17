@@ -6,31 +6,21 @@ var captured = /token=([^&]+)/.exec(url)[1]; // Value is in [1] ('384' in our ca
 var result = captured ? captured : 'myDefaultValue';
 console.log(captured);
 
-
-function calculateApiSignatureStack()
+function func()
 {
-
     // Set elsewhere but hacked into this example:
     var last_fm_data = {
         'last_token':captured,
         'user': 'Gkalinov',
-        'secret': 'b19b6efed21c4110264fa2393e26bd3a'
+        'secret': myshared_secret
     };
-
-    // Kick it off.
     last_fm_call('auth.getSession', {'token': last_fm_data['last_token']});
-
 
     // Low level API call, purely builds a POSTable object and calls it.
     function last_fm_call(method, data){
 
-        //data seria {'token': last_fm_data['last_token']} que seria captured o sessionStoragemyToken
-        // param data - dictionary.Populate Values on the Object s you'll see below the Key values can be any object and are not limited to Strings.
-        last_fm_data[method] = false;
-        // Somewhere to put the result after callback.
-
         // Append some static variables
-        data.api_key = "eadafa1e4ae708f5f7046192a4602074";
+        data.api_key = myAPI_key;
         //data['format'] = 'json';
         data['method'] = method;
 
@@ -47,7 +37,7 @@ function calculateApiSignatureStack()
             data : 'method=auth.getSession' +
                 '&token='+
                 captured+
-                '&api_key=eadafa1e4ae708f5f7046192a4602074' +
+                '&api_key='+ myAPI_key +
                 '&api_sig='+
                 post_data.api_sig+
                 '&format=json',
@@ -89,12 +79,8 @@ function calculateApiSignatureStack()
             ss = ss + std + params[std]; // build string
         });
         ss += last_fm_data['secret'];
-        // console.log(ss + last_fm_data['secret']);
-        //Segons documentacio : https://www.last.fm/api/webauth
-        //api signature = md5("api_keyxxxxxxxxmethodauth.getSessiontokenxxxxxxxmysecret")
-        //OBJECTIU NOSTRE SERA ACONSEGUIR UNA LINEA COM AQUESTA
-        // api_keyAPIKEY1323454formatjsonmethodauth.getSessiontokenTOKEN876234876SECRET348264386
-        //hashed_sec = $.md5(unescape(encodeURIComponent(ss)));
+        //fem el utf8 aqui.
+
         var hashed_sec = md5(unescape(encodeURIComponent(ss))); // "2063c1608d6e0baf80249c42e2be5804"
         console.log("La apiSig es: " + hashed_sec);
         so['api_sig'] = hashed_sec; // Correct when calculated elsewhere.
