@@ -1,0 +1,15 @@
+table,th,td {
+    border : 1px solid black;
+    border-collapse: collapse;
+}
+th,td {
+    padding: 5px;
+}
+.imatgeFons{
+    margin-left: auto;
+    margin-right: auto;
+}
+.imatgeNav{
+    width: 200px;
+    height: 200px;
+}
