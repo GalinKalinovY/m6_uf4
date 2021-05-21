@@ -56,9 +56,15 @@ function loadData() {
         success: function (res) {
 
             console.log("Resposta: Name " + res.user.name);// Should return session key.
-            console.log("Resposta: image " + res.user.url);
+            console.log("Resposta: image " + res.user.country);
             console.log("Resposta: image " + res.user.image[2]['#text']);
+           /* $('#artistName').html(res.user.name);
+            $('#artistImage').html('<img src="' + res.user.image[2]['#text']+ '" />');
+            $('#artistBio').html(res.user.country);*/
 
+            document.getElementById("artistName").innerHTML = res.user.name;
+            document.getElementById("artistBio").innerHTML = res.user.country;
+            document.getElementById("artistImage").src= res.user.image[2]['#text'];
         },
         error: function (xhr, status, error) {
             var errorMessage = xhr.status + ': ' + xhr.statusText

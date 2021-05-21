@@ -40,7 +40,8 @@ function myFunction(xml) {
       "<td>" +
       x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
       "</td>" +
-      x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue +
+
+          <img src="x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue" alt="imatge"/> +
       "</td></tr>"+ "<td>" +
           x[i].getElementsByTagName("tracks")[0].getElementsByTagName("track")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue +
           "</td>"
