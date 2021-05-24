@@ -4,37 +4,49 @@
     <title>Menu principal Last FM</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" href="css/estils.css">
+    <script type="text/javascript" src="./js/ajaxProva2.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/UTF8.js"></script>
-    <script type="text/javascript" src="./js/ajaxProva2.js"></script>
     <script type="text/javascript" src="./js/carga.js"></script>
     <script type="text/javascript" src="./js/md5.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 
 </head>
 <body>
-<h1>Im login to</h1>
+<img src="imatge/Lastfm.jpg" alt="imatgeNavMainPage" class="imatgeNav">
 <div id="userData">
     <!--<img src="https://lastfm-img2.akamaized.net/i/u/34s/cc637716959b4acecaa1a307e300f61f.png" />-->
 </div>
-<br>
 
-<div >
-    <p id="artistName"></p>
-    <img id="artistImage">
-    <p id="artistBio"></p>
-</div>
+    <div class="portada">
+        <nav class="menuMainPage">
+            <br>
+            <ul>
+                <li><a href="JavaScript:loadDoc()">Album artista Young Thug</a></li>
+                <li><a href="JavaScript:loadDoc2()">Album artista Travis Scott</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <div class="usuari">
+            <p id="artistName"></p>
+            <img id="artistImage">
+            <p id="artistBio"></p>
+        </div>
+    </div>
+<h3>HIP-HOP 2021</h3>
+<p class="benvinguda">Aqui mostrarem diferents llistats dels meus artistes preferits d'aquest any.</p>
 <div id="error"></div>
-
-<br>
-<p>Notes de lautor:<br>
-    Copyright tots els drets reservats...<br>
-    Prohibida la copia distribucio o reproduccio total o PARCIAL sense permis</p>
 <br>
 <br>
-<button type="button" onclick="myloadDocFunction()">Get User information</button>
-<table id="demo"></table>
-
-<button type="button" onclick="calculateApiSig()">Calculate API Signature Stack</button>
+<div class="album_artistes">
+    <table id="albumYoungThug"></table>
+    <table id="albumTravisScott"></table>
+</div>
 </body>
+<footer>
+    <p>Copyright tots els drets reservats...<br>
+        Prohibida la copia distribucio o reproduccio total o PARCIAL sense permis</p>
+</footer>
 </html>
