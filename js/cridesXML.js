@@ -112,7 +112,7 @@ function processarResposta2(xml) {
         "</td>"+"<td>"+
         x[i].getElementsByTagName("playcount")[0].childNodes[0].nodeValue
         +"</td>"+"</tr>"+"<td>"+
-        "Track Rank 1"
+        "Tag"
         +"</td>"+"<td>" +
         x[i].getElementsByTagName("tags")[0].getElementsByTagName("tag")[0].getElementsByTagName("name")[0].childNodes[0].nodeValue +
         "</td>"+"<tr><td>"+
@@ -120,10 +120,12 @@ function processarResposta2(xml) {
         "</td><td>" +
         "Published "+x[i].getElementsByTagName("wiki")[0].getElementsByTagName("published")[0].childNodes[0].nodeValue+
         "</td></tr>"+
-        "<tr><td>"+ "Track Rank 2" +"</td>"+"<td>" +
+        "<tr><td>"+ "Tag" +"</td>"+"<td>" +
         x[i].getElementsByTagName("tags")[0].getElementsByTagName("tag")[1].getElementsByTagName("name")[0].childNodes[0].nodeValue +
         "</td>"+"<tr><td>"+
         x[i].getElementsByTagName("tags")[0].getElementsByTagName("tag")[1].getElementsByTagName("url")[0].childNodes[0].nodeValue +
+        "</td><td>"+
+          x[i].getElementsByTagName("tags")[0].getElementsByTagName("tag")[3].getElementsByTagName("url")[0].childNodes[0].nodeValue +
         "</td></tr>"
     ;
   }

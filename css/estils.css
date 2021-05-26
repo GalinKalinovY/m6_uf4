@@ -76,10 +76,24 @@ h3{
     text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
 }
 .album_artistes{
+    width: 100%;
+    float: left;
 }
-#albumTravisScott{
-    margin-left: 50%;
+.album_artistes2{
+    float: right;
 }
+.artista1{
+    display: inline-block;
+    border: 1px white solid;
+    margin-left: 7%;
+}
+.artista2{
+    border: 1px white solid;
+     display: inline-block;
+    height: 460px;
+    margin-left: 26%;
+ }
+
 footer{
     text-align: center;
     background-color: #333;

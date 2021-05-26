@@ -5,8 +5,9 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <link rel="stylesheet" href="css/estils.css">
-    <script type="text/javascript" src="./js/ajaxProva2.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cridesXML.js"></script>
+    <script type="text/javascript" src="js/cridesJSON.js"></script>
     <script type="text/javascript" src="./js/UTF8.js"></script>
     <script type="text/javascript" src="./js/carga.js"></script>
     <script type="text/javascript" src="./js/md5.min.js"></script>
@@ -25,8 +26,8 @@
             <ul>
                 <li><a href="JavaScript:loadDoc()">Album artista Young Thug</a></li>
                 <li><a href="JavaScript:loadDoc2()">Album artista Travis Scott</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="JavaScript:loadDoc3()">Album artista A$ap Rocky</a></li>
+                <li><a href="JavaScript:loadDoc4()">Album artista 50 Cent</a></li>
             </ul>
         </nav>
         <div class="usuari">
@@ -40,10 +41,22 @@
 <div id="error"></div>
 <br>
 <br>
-<div class="album_artistes">
-    <table id="albumYoungThug"></table>
-    <table id="albumTravisScott"></table>
-</div>
+    <div class="album_artistes">
+        <div class="artista1">
+            <table id="albumYoungThug"></table>
+        </div>
+        <div class="artista2">
+            <table id="albumTravisScott"></table>
+        </div>
+    </div>
+    <div class="album_artistes2">
+        <div class="artista1">
+            <table id="albumASAPROCKY"></table>
+        </div>
+        <div class="artista2">
+            <table id="album50CENT"></table>
+        </div>
+    </div>
 </body>
 <footer>
     <p>Copyright tots els drets reservats...<br>
