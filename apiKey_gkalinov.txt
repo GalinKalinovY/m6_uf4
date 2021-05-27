@@ -1,0 +1,4 @@
+Application name 	api classe m6
+API key 	eadafa1e4ae708f5f7046192a4602074
+Shared secret 	b19b6efed21c4110264fa2393e26bd3a
+Registered to 	Gkalinov
