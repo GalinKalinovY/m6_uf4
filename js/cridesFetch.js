@@ -1,3 +1,10 @@
+/**
+*  Funcio: carregarFetch - el que fa la funcio es carregar en tipus fetch com a spotify els atributs json.
+*
+* @param endpoint - la ruta final.
+* @param artists - el token del artista
+*
+**/
 const endpoint = "https://api.spotify.com/v1/recommendations";
 const artists = '6sFIWsNpZYqfjUpaCgueju';
 const danceability = encodeURIComponent('0.9');
