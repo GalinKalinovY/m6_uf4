@@ -1,9 +1,10 @@
+
 /**
- *
- *  UTF-8 data encode / decode
- *  http://www.webtoolkit.info/
- *
- **/
+*  Funcio: encode, el que fa la funcio es agafar un text i codificarlo.
+*
+* @param utftext - aqui tindrem el text utf que ens arriba que després ho transformem.
+* @return utftext - retorna el text transformat preparat per estar descodificat en utf8.
+**/
 var Utf8 = {
     // public method for url encoding
     encode : function (string) {
@@ -27,6 +28,13 @@ var Utf8 = {
         return utftext;
     },
     // public method for url decoding
+    
+/**
+*  Funcio: decode, es agafar el text codificat i descodificarlo en utf8.
+*
+* @param utftext - aqui tindrem el text utf codificat que ens arriba de l'altra funcio.
+* @return string - retorna string descodificat en ut8.
+**/
     decode : function (utftext) {
         var string = "";
         var i = 0;
