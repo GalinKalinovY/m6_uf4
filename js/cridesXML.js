@@ -1,3 +1,14 @@
+/**
+*  Funcio: loadDoc - la funcio la cridem quant volem mostrar els albums del artista en format xml, ho fem amb httprequest la consulta.
+*                     La primera part de la funcio el que fa es conectar-se i mirar si tot ha funcionat, sino enviara un error. Si tot funciona
+*                     correctamement sen anira a dins de la funcio processarResposta() que es troba a dins i alla es posara totes les dades xml 
+*                     en la taula que cridarem desde el html.
+*
+* @param urlquery - tindrem la url del query que despres s'agafara per poder buscar el elements.
+* @param txt - aqui tindrem tota la part de la taula que agafe els elements amb format json i els pose a dins dels td i els tr.
+* @param x - agafe el element principal del xml que en aquest cas es album, d'aqui penja tot i al recorrer el for podem introduir les dades a dins de la taula utlitzant aquesta variable i el seu index.
+* @param table - es la variable que genera la primera part de la taula que despres a dins tindrem tota la informacio del xml.
+**/
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -24,14 +35,9 @@ function processarResposta(xml) {
   var xmlDoc = xml.responseXML;
   var xmlDoc2 = xml.responseXML;
   var xmlDoc3 = xml.responseXML;
-
-  //var mybid = xmlDoc.getElementsByTagName("mbid")[0].childNodes[0].nodeValue ;
   var table="<tr><th colspan='2'>Young Thug</th></tr>";
- // table += "<td>"+"mBID"+"</td>";
- // table += "<td>" + mybid +    "</td>";
-
-
-    var x = xmlDoc2.getElementsByTagName("album");
+  var x = xmlDoc2.getElementsByTagName("album");
+  
     for (i = 0; i <x.length; i++) {
       table += "<tr><td>" +
       x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
@@ -73,7 +79,17 @@ function processarResposta(xml) {
 }
 
 /**************************  ARTISTA 2  ****************************************************/
-
+/**
+*  Funcio: loadDoc - la funcio la cridem quant volem mostrar els albums del artista en format xml, ho fem amb httprequest la consulta.
+*                     La primera part de la funcio el que fa es conectar-se i mirar si tot ha funcionat, sino enviara un error. Si tot funciona
+*                     correctamement sen anira a dins de la funcio processarResposta() que es troba a dins i alla es posara totes les dades xml 
+*                     en la taula que cridarem desde el html.
+*
+* @param urlquery - tindrem la url del query que despres s'agafara per poder buscar el elements.
+* @param txt - aqui tindrem tota la part de la taula que agafe els elements amb format json i els pose a dins dels td i els tr.
+* @param x - agafe el element principal del xml que en aquest cas es album, d'aqui penja tot i al recorrer el for podem introduir les dades a dins de la taula utlitzant aquesta variable i el seu index.
+* @param table - es la variable que genera la primera part de la taula que despres a dins tindrem tota la informacio del xml.
+**/
 function loadDoc2() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -97,9 +113,7 @@ function loadDoc2() {
 function processarResposta2(xml) {
   var i;
   var xmlDoc2 = xml.responseXML;
-
   var table="<tr><th colspan='2'>Travis Scott</th></tr>";
-
   var x = xmlDoc2.getElementsByTagName("album");
   for (i = 0; i <x.length; i++) {
     table += "<tr><td>" +
