@@ -1,3 +1,14 @@
+/**
+*  Funcio: loadDoc3 - la funcio la cridem quant volem mostrar els albums del artista en format json, ho fem amb httprequest la consulta.
+*                     La primera part de la funcio el que fa es conectar-se i mirar si tot ha funcionat, sino enviara un error. Si tot funciona
+*                     correctamement sen anira a dins de la funcio processarResposta() que es troba a dins i alla es posara totes les dades json 
+*                     en la taula que cridarem desde el html.
+*
+* @param urlquery - tindrem la url del query que despres s'agafara per poder buscar el elements.
+* @param txt - aqui tindrem tota la part de la taula que agafe els elements amb format json i els pose a dins dels td i els tr.
+*
+**/
+
 function loadDoc3() {
   if (window.XMLHttpRequest) {
     // Mozilla, Safari, IE7+
@@ -54,6 +65,16 @@ function loadDoc3() {
 }
 
 /************************************** SEGONA PETICIO ************************************************/
+/**
+*  Funcio: loadDoc4 - la funcio la cridem quant volem mostrar els albums del artista en format json, ho fem amb httprequest la consulta.
+*                     La primera part de la funcio el que fa es conectar-se i mirar si tot ha funcionat, sino enviara un error. Si tot funciona
+*                     correctamement sen anira a dins de la funcio processarResposta() que es troba a dins i alla es posara totes les dades json 
+*                     en la taula que cridarem desde el html.
+*
+* @param urlquery - tindrem la url del query que despres s'agafara per poder buscar el elements.
+* @param txt - aqui tindrem tota la part de la taula que agafe els elements amb format json i els pose a dins dels td i els tr.
+*
+**/
 
 function loadDoc4() {
   if (window.XMLHttpRequest) {
