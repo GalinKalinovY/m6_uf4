@@ -75,13 +75,12 @@ h3{
     background: #1a1a1a;
     text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
 }
-.album_artistes{
-    width: 100%;
+/*.album_artistes{
     float: left;
 }
 .album_artistes2{
     float: right;
-}
+}*/
 .artista1{
     display: inline-block;
     border: 1px white solid;
