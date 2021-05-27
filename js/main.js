@@ -2,6 +2,23 @@
 //const myshared_secret="b19b6efed21c4110264fa2393e26bd3a";
 
 //const urlAudio = "http://ws.audioscrobbler.com/2.0/?";
+
+/**
+*  Funcio: loadData - funcio cridara el get.session i ens generara a prtir del token, apikey i el tipus de data el session key que després l'utilitzarem
+*                     per poder agafar la estructura json o xml dels artistes, albums o informacio en general.
+*                     
+*                     
+*
+* @param url - la url on es localitza la pagina.
+* @param captured - extraiem el token de la url.
+* @param result - el resultat del token extret i formateijat.
+* @param data - tindra els parametres necessaris que la api demane per poder fer la funcio, en aquest cas es la de auth.getSession.
+* @param sessionKey - la clau de sessio generada.
+* @param token - el token de la url.
+* @param apikey - la api key del usuari de lastfm.
+*
+**/
+
 var usuari= null;
 
 //var myLastFMuser = new lastFMapi();
@@ -52,12 +69,26 @@ function loadData() {
     }
 
 }
+/**
+*  Funcio: mostrarUsuari - en aquesta funcio l'unic que fem es agafar de la sessio els parametres del usuari que volem mostrar i els enviem al document.
+*                     Ho hem fet d'aquesta manera ja que al reiniciar la pàgina es interfereix i no queda guardat a dins de la classe de lastFMapi, que es on tenim totes les variables.
+**/
+
 function mostrarUsuari(){
     document.getElementById("artistName").innerHTML = sessionStorage.getItem("usuari");
     document.getElementById("artistBio").innerHTML = sessionStorage.getItem("pais");
     document.getElementById("artistImage").src= sessionStorage.getItem("imatge");
 }
 
+/**
+*  Funcio: carregarUsuari - La funcio que es crida agafe els parametres necessaris, en aquest cas el nom d'usuari i l'api key i carrega totes les dades d'aquest.
+*                           Després es fa el tractament per a que es mostri el que ens interese de l'usuari. A part nosaltres també guardem en sessió i al a classe
+*                           lastFMapi el usuari i les seves dades que després carregarem.
+*                     
+* @param url - la url on es localitza la pagina.
+* @param data2 -  tindra els parametres necessaris que la api demane per poder fer la funcio, en aquest cas es la de user.getInfo.
+*
+**/
 function carregarUsuari(usuari){
     var data2 = {
         'user': usuari,
@@ -101,10 +132,15 @@ function carregarUsuari(usuari){
     });
 }
 
+/**
+*  Funcio: calculateApiSig - agafe els parametres que se li enviem des de la funcio loadData() i calcule el session key amb el apikey, token i secret.
+*                      
+*
+* @param arrayKeysParams - array amb els parametres passats.
+*
+**/
 function calculateApiSig( params) {
 
-    //Crec que només necessitem apikey, token i secret i no necessitem params, els podem treure de sessionStorage
-    //Calcula l'apiSig a partir dels valors d'abans...
     var stringActual = "";
     var arrayKeysParams = [];
 
@@ -133,14 +169,22 @@ function calculateApiSig( params) {
 }
 
 /********************************** CARREGA AUTOR AMB JQUERY *************************************/
-
+/**
+*  Funcio: jqueryLoadDoc - la funcio la cridem quant volem mostrar un aconsulta en format json, pero no es cride amb un httprequest com abans.
+*                     La primera part de la funcio el que fa es conectar-se i mirar si tot ha funcionat, sino enviara un error. Si tot funciona
+*                     correctamement entrara a dins i alla agafara totes les dades necessaries per poder fer la consulta. Després la info es genera i envia al html.
+*
+* @param dades1 - es un array on tenim el metode, el artista, la track, el apikey, el token i el sessionkey.
+* @param myapisiglove - es la variable que se li asigne el calcul de la apisig amb les dades1.
+*
+**/
 function jqueryLoadDoc() {
     if (sessionStorage.getItem("mySessionKey") == null) {
         console.log("Error no estas authenticat");
     } else {
-        var last_url = "http://ws.audioscrobbler.com/2.0/";
+        var last_url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=eadafa1e4ae708f5f7046192a4602074&artist=Playboi%Carti&album=Die%Lit&format=json";
 
-        var dadestl = {
+        var dades1 = {
             method: 'track.Love',
             artist: Utf8.encode('Muse'),
             track: Utf8.encode('Take a Bow'),
