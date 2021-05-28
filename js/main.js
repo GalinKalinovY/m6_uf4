@@ -29,7 +29,7 @@ function loadData() {
         var captured = /token=([^&]+)/.exec(url)[1]; // Value is in [1] ('384' in our case)
         var result = captured ? captured : 'myDefaultValue';
         myLastFMuser.token = Utf8.encode(captured);
-
+        sessionStorage.setItem("token",Utf8.encode(captured));
         var data = {
             'token': myLastFMuser.token,
             'api_key': myLastFMuser.apikey,
@@ -189,18 +189,14 @@ function jqueryLoadDoc() {
             artist: Utf8.encode('Muse'),
             track: Utf8.encode('Take a Bow'),
             api_key: myAPI_key,
-            token: myLastFMuser.token,
             sk: sessionStorage.getItem("mySessionKey")
         };
 
-        var myapisiglove = calculateApiSig(dades1);
-        console.log("La apiSig de Track love es: " + myapisiglove['api_sig']);
-        //delete dadestl["token"];
-        dades1['api_sig'] = myapisiglove['api_sig'];
+        dades1['api_sig']  = calculateApiSig(dades1);
 
         $.ajax({
             type: "POST", //both are same, in new version of jQuery type renamed to method
-            url: urlAudio,
+            url: 'http://ws.audioscrobbler.com/2.0/?',
             data: dades1,
             dataType: "xml", //datatype especifica el tipus de dada que s'espera rebre del servidor
             success: function (dades1) {
