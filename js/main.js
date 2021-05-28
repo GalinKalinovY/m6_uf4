@@ -191,7 +191,7 @@ function jqueryLoadDoc() {
             api_key: myAPI_key,
             sk: sessionStorage.getItem("mySessionKey")
         };
-
+   
         dades1['api_sig']  = calculateApiSig(dades1);
 
         $.ajax({
