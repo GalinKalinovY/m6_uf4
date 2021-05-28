@@ -182,7 +182,7 @@ function jqueryLoadDoc() {
     if (sessionStorage.getItem("mySessionKey") == null) {
         console.log("Error no estas authenticat");
     } else {
-        var last_url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=eadafa1e4ae708f5f7046192a4602074&artist=Playboi%Carti&album=Die%Lit&format=json";
+        var last_url="http://ws.audioscrobbler.com/2.0/";
 
         var dades1 = {
             method: 'track.Love',
@@ -193,21 +193,21 @@ function jqueryLoadDoc() {
             sk: sessionStorage.getItem("mySessionKey")
         };
 
-        var myapisiglove = calculateApiSig(dadestl);
+        var myapisiglove = calculateApiSig(dades1);
         console.log("La apiSig de Track love es: " + myapisiglove['api_sig']);
         //delete dadestl["token"];
-        dadestl['api_sig'] = myapisiglove['api_sig'];
+        dades1['api_sig'] = myapisiglove['api_sig'];
 
         $.ajax({
             type: "POST", //both are same, in new version of jQuery type renamed to method
             url: urlAudio,
-            data: dadestl,
+            data: dades1,
             dataType: "xml", //datatype especifica el tipus de dada que s'espera rebre del servidor
-            success: function (res) {
-                processarRespostaLoveTrackJquery(res);
+            success: function (dades1) {
+                processarRespostaLoveTrackJquery(dades1);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                console.log("Error en Love Track to track" + res.track + "de l'artista" + res.artist);
+                console.log("Error en Love Track to track" + dades1.track + "de l'artista" + dades1.artist);
                 document.getElementById("demo2").innerHTML = "<h2>Failure</h2>";
             }
         });
